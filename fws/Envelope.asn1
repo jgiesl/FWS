@@ -1,0 +1,26 @@
+EnvelopeModule DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+
+Envelope ::= SEQUENCE {
+
+	header SEQUENCE {
+		block OCTET STRING OPTIONAL
+	},
+
+	body-or-fault CHOICE {
+		body  SEQUENCE {
+			type VisibleString,
+			data OCTET STRING
+		},
+		fault SEQUENCE {
+			code ENUMERATED {
+				sender,
+				receiver
+			},
+
+			reason UTF8String OPTIONAL
+		}
+	}
+}
+
+END

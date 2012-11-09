@@ -1,0 +1,5 @@
+-----------------
+FWS
+-----------------
+
+FWS is a C based implementation of webservice server and client. The main difference of classic webservice method is in using of DER encoded messages rather than SOAP messages in XML format. This approach leads to higher performance during message processing and smaller amount of data which need to be exchanged between server and client through channel.

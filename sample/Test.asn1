@@ -1,0 +1,19 @@
+TestModule DEFINITIONS AUTOMATIC TAGS ::= 
+BEGIN
+
+TestOperation ::= CHOICE {
+	input TestInput,	
+	output TestOutput
+}
+
+TestInput ::= SEQUENCE {
+	number INTEGER,
+	text UTF8String
+}
+
+TestOutput ::= SEQUENCE {
+	result UTF8String,
+	code INTEGER
+}
+
+END
